@@ -12,7 +12,12 @@ class NotesController < ApplicationController
       user_notes.order(updated_at: :desc)
     end
 
-    @pagy, @notes = pagy(notes)
+    @pagy, @notes =
+      if query.present?
+        pagy(notes)
+      else
+        pagy(:keyset, notes)
+      end
 
     respond_to do |format|
       format.html

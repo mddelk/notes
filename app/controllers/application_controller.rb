@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern unless Rails.env.development?
 
   include Authentication
-  include Pagy::Backend
+  include Pagy::Method
 
   around_action :switch_locale
 

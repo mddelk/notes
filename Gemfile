@@ -25,7 +25,7 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 gem "sqlite_extensions-uuid"
-gem "pagy", "~> 9.4"
+gem "pagy", "~> 43.0"
 gem "faker"
 
 group :development, :test do
