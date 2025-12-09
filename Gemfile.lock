@@ -143,6 +143,7 @@ GEM
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
     ffi (1.17.2-arm-linux-musl)
+    ffi (1.17.2-arm64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
     fugit (1.12.1)
@@ -230,6 +231,8 @@ GEM
     nokogiri (1.18.10-arm-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.18.10-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
@@ -373,6 +376,7 @@ GEM
     sqlite3 (2.7.4-aarch64-linux-musl)
     sqlite3 (2.7.4-arm-linux-gnu)
     sqlite3 (2.7.4-arm-linux-musl)
+    sqlite3 (2.7.4-arm64-darwin)
     sqlite3 (2.7.4-x86_64-linux-gnu)
     sqlite3 (2.7.4-x86_64-linux-musl)
     sqlite_extensions-uuid (1.0.2)
@@ -405,6 +409,7 @@ GEM
     tailwindcss-ruby (4.1.13)
     tailwindcss-ruby (4.1.13-aarch64-linux-gnu)
     tailwindcss-ruby (4.1.13-aarch64-linux-musl)
+    tailwindcss-ruby (4.1.13-arm64-darwin)
     tailwindcss-ruby (4.1.13-x86_64-linux-gnu)
     tailwindcss-ruby (4.1.13-x86_64-linux-musl)
     terminal-table (4.0.0)
@@ -412,6 +417,7 @@ GEM
     thor (1.4.0)
     thruster (0.1.16)
     thruster (0.1.16-aarch64-linux)
+    thruster (0.1.16-arm64-darwin)
     thruster (0.1.16-x86_64-linux)
     timeout (0.4.3)
     tsort (0.2.0)
@@ -445,6 +451,7 @@ PLATFORMS
   aarch64-linux-musl
   arm-linux-gnu
   arm-linux-musl
+  arm64-darwin-24
   x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
@@ -462,7 +469,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   importmap-rails
   kamal
-  pagy
+  pagy (~> 9.4)
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.0)
