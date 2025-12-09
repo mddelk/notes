@@ -13,16 +13,7 @@ Rails 8 with Hotwire + Stimulus, Tailwind, Importmaps, and SQLite.
 ## Getting started
 
 ```sh
-# clone the repo
-git clone https://github.com/jethrodaniel/notes
-cd notes
-
-# setup the app
-bundle
-bin/setup
-
-# run it locally
-bin/dev
+git clone https://github.com/jethrodaniel/notes && cd notes && bin/setup
 ```
 
 Then visit http://localhost:3000 in your browser.
