@@ -21,7 +21,7 @@ Then visit http://localhost:3000 in your browser.
 You can sign in with the default credentials (see `db/seeds.rb` for details):
 
 ```
-email: admin@notes.localhost
+email: admin@app.localhost
 password: password
 ```
 
