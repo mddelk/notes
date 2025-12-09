@@ -4,7 +4,7 @@ CI.run "bin/ci", "Make it so" do
   step "Setup", "bin/setup --skip-server"
 
   step "Style: Ruby", "bin/rubocop"
-  step "Style: Javascript", "npm run lint"
+  step "Style: Javascript", "yarn run lint"
   step "Style: Translations", "bundle exec i18n-tasks health"
 
   step "Security: Gem audit", "bin/bundler-audit"

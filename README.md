@@ -41,7 +41,7 @@ And `prettier` (linting):
 
 ```sh
 sudo apt install -y npm
-npm install
+npm install -g yarn
 ```
 
 ## Deployment
