@@ -16,9 +16,7 @@ Rails 8 with Hotwire + Stimulus, Tailwind, Importmaps, and SQLite.
 git clone https://github.com/jethrodaniel/notes && cd notes && bin/setup
 ```
 
-Then visit http://localhost:3000 in your browser.
-
-You can sign in with the default credentials (see `db/seeds.rb` for details):
+Then visit http://localhost:3000 in your browser, and sign in (see `db/seeds.rb` for details):
 
 ```
 email: admin@app.localhost
@@ -35,13 +33,6 @@ You may also need to install dependencies for system tests:
 
 ```sh
 snap install chromium # e.g, on ubuntu 24.04
-```
-
-And `prettier` (linting):
-
-```sh
-sudo apt install -y npm
-npm install -g yarn
 ```
 
 ## Deployment
