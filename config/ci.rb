@@ -14,4 +14,5 @@ CI.run "bin/ci", "Make it so" do
 
   step "Tests: Rails", "BROWSER=rack-test bin/rails test:all"
   step "Tests: System", "bin/rails test:system"
+  step "Tests: Seeds", "env RAILS_ENV=test bin/rails db:seed:replant"
 end
