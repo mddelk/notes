@@ -6,6 +6,8 @@ CI.run "bin/ci", "Make it so" do
   step "Style: Ruby", "bin/rubocop"
   step "Style: Javascript", "yarn run lint"
   step "Style: Translations", "bundle exec i18n-tasks health"
+  step "Style: ERB (linter)", "yarn run herb:lint"
+  step "Style: ERB (formatter)", "yarn run herb:format:check"
 
   step "Security: Gem audit", "bin/bundler-audit"
   step "Security: Importmap vulnerability audit", "bin/importmap audit"
