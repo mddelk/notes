@@ -60,7 +60,7 @@
 
     <% if (query = params[:q]).present? %>
       <div class="w-full flex justify-center md:justify-start gap-2">
-        <div class="">
+        <div>
           <%= t(".search_results_html", query: query, count: @notes.count) %>
         </div>
 
