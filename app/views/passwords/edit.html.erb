@@ -3,31 +3,28 @@
 <%= form_with url: password_path(params[:token]),
   method: :put,
   class: "flex flex-col w-full md:max-w-96 h-full items-center p-8 gap-4" do |form| %>
-  <h1 class="text-2xl font-bold py-6">
-    <%= t(".update_your_password") %>
-  </h1>
+  <h1 class="text-2xl font-bold py-6"><%= t(".update_your_password") %></h1>
 
   <%= render 'layouts/flash' %>
 
   <%= form.label :password, t(".password_label"), class: "w-full" %>
+
   <%= form.password_field :password,
     required: true,
     autocomplete: "new-password",
     placeholder: t(".password_placeholder"),
     maxlength: 72,
-    class: "w-full border border-zinc-400 dark:border-zinc-600 shadow rounded-lg p-2"
-  %>
+    class: "w-full border border-zinc-400 dark:border-zinc-600 shadow rounded-lg p-2" %>
 
   <%= form.label :password_confirmation, t(".password_confirmation_label"), class: "w-full" %>
+
   <%= form.password_field :password_confirmation,
     required: true,
     autocomplete: "new-password",
     placeholder: t(".password_confirmation_placeholder"),
     maxlength: 72,
-    class: "w-full border border-zinc-400 dark:border-zinc-600 shadow rounded-lg p-2"
-  %>
+    class: "w-full border border-zinc-400 dark:border-zinc-600 shadow rounded-lg p-2" %>
 
   <%= form.submit t(".save"),
-    class: "w-full border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 hover:bg-zinc-800 shadow rounded-full mt-6 p-1"
-  %>
+    class: "w-full border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 hover:bg-zinc-800 shadow rounded-full mt-6 p-1" %>
 <% end %>

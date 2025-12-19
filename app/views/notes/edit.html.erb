@@ -4,8 +4,9 @@
   <nav class="flex w-full justify-between min-h-12 h-16 py-3">
     <%= link_to notes_path,
       class: "w-12 h-10 p-3 flex items-center justify-center border border-zinc-400 dark:border-zinc-600 shadow rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800" do %>
-       <%= svg_icon "arrow-left", class: "dark:invert" %>
-        <div class="sr-only"><%= t("shared.back_button") %></div>
+      <%= svg_icon "arrow-left", class: "dark:invert" %>
+
+      <div class="sr-only"><%= t("shared.back_button") %></div>
     <% end %>
 
     <div class="flex items-center">
@@ -17,7 +18,7 @@
     <div class="flex items-center gap-2">
       <%= button_to edit_note_path(@note),
         class: "w-12 h-10 p-3 flex h-full items-center justify-center rounded-r-lg hover:bg-zinc-200 dark:hover:bg-zinc-800" do %>
-         <%= svg_icon "star", class: "w-6 dark:invert" %>
+        <%= svg_icon "star", class: "w-6 dark:invert" %>
       <% end %>
 
       <%= button_to note_path(@note),
@@ -29,13 +30,12 @@
           confirm_message_value: t(".confirm_destroy")
         },
         class: "w-12 h-10 p-3 flex h-full items-center justify-center rounded-r-lg hover:bg-zinc-200 dark:hover:bg-zinc-800" do %>
-         <%= svg_icon "trash", class: "dark:invert" %>
-         <div class="sr-only"><%= t(".destroy_button") %></div>
+        <%= svg_icon "trash", class: "dark:invert" %>
+
+        <div class="sr-only"><%= t(".destroy_button") %></div>
       <% end %>
     </div>
   </nav>
 
-  <div class="flex-1 w-full">
-    <%= render "form", note: @note %>
-  </div>
+  <div class="flex-1 w-full"><%= render "form", note: @note %></div>
 </div>

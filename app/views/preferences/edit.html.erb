@@ -1,20 +1,26 @@
 <% content_for :title, t(".title") %>
 
 <div class="flex-1 flex flex-col items-center w-full md:w-5/6 h-full gap-2">
-  <nav class="flex w-full gap-4 bg-zinc-50 dark:bg-zinc-950 p-2 py-3 border-b border-zinc-400 dark:border-zinc-600 shadow flex justify-center md:justify-start w-full min-h-12">
+  <nav
+    class="
+      flex w-full gap-4 bg-zinc-50 dark:bg-zinc-950 p-2 py-3 border-b
+      border-zinc-400 dark:border-zinc-600 shadow flex justify-center
+      md:justify-start w-full min-h-12
+    "
+  >
     <div class="flex justify-end gap-4 items-center">
       <%= link_to notes_path,
         class: "w-12 h-10 p-3 flex items-center justify-center border border-zinc-400 dark:border-zinc-600 shadow rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800" do %>
-         <%= svg_icon "arrow-left", class: "dark:invert" %>
-          <div class="sr-only"><%= t("shared.back_button") %></div>
+        <%= svg_icon "arrow-left", class: "dark:invert" %>
+
+        <div class="sr-only"><%= t("shared.back_button") %></div>
       <% end %>
     </div>
 
     <div class="flex-1 flex items-center justify-center">
-      <div class="text-lg">
-        <%= t(".title") %>
-      </div>
+      <div class="text-lg"><%= t(".title") %></div>
     </div>
+
     <div class="p-2 min-w-12"></div>
   </nav>
 
@@ -28,7 +34,7 @@
         method: :delete,
         data: { turbo_confirm: t(".confirm_signout") },
         class: "w-80 flex justify-center p-2 rounded-lg shadow border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800 min-w-1/2" do %>
-         <div><%= t(".signout_button") %></div>
+        <div><%= t(".signout_button") %></div>
       <% end %>
     </div>
   </div>

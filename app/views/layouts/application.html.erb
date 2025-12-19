@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title><%= content_for(:title) || t("shared.application_title") %></title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -21,13 +24,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="
-    w-screen h-screen
-    flex flex-col items-center
-    bg-zinc-50
-    text-zinc-950
-    dark:bg-zinc-950
-    dark:text-zinc-200"
+  <body
+    class="
+      w-screen h-screen flex flex-col items-center bg-zinc-50 text-zinc-950
+      dark:bg-zinc-950 dark:text-zinc-200
+    "
   >
     <%= yield %>
   </body>

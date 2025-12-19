@@ -4,11 +4,9 @@
   <div class="flex w-full justify-between">
     <%= link_to notes_path,
       class: "p-2 rounded-lg" do %>
-       <%= svg_icon "arrow-left", class: "w-6 dark:invert" %>
+      <%= svg_icon "arrow-left", class: "w-6 dark:invert" %>
     <% end %>
   </div>
 
-  <div class="flex-1 w-full">
-    <%= render "form", note: @note %>
-  </div>
+  <div class="flex-1 w-full"><%= render "form", note: @note %></div>
 </div>

@@ -6,14 +6,14 @@
     <%= link_to edit_note_path(note),
       id: dom_id(note),
       class: "h-full p-3 flex flex-col gap-2 rounded-lg" do %>
-
-      <div class="text-lg">
-        <%= note.title %>
-      </div>
+      <div class="text-lg"><%= note.title %></div>
 
       <div class="flex-1">
         <% content = truncate note.content, length: Current.user.preferences.note_index_truncate_length %>
-        <p class="w-full h-full whitespace-pre-line break-all"><%= content %></p>
+
+        <p class="w-full h-full whitespace-pre-line break-all">
+          <%= content %>
+        </p>
       </div>
 
       <%= button_to false, note_path(note),

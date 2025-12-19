@@ -7,31 +7,28 @@
     <div class="p-2 w-full flex items-center gap-4">
       <%= form.label :language,
         t(".language"),
-        class: "text-small font-medium"
-      %>
+        class: "text-small font-medium" %>
+
       <%= form.select :language,
         language_options_for_select,
         {selected: Current.user.preferences.language},
-        class: "rounded-lg p-2 border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800"
-      %>
+        class: "rounded-lg p-2 border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800" %>
     </div>
 
     <div class="p-2 w-full flex items-center gap-4">
       <%= form.label :note_index_truncate_length,
         t(".note_index_truncate_length"),
-        class: "text-small font-medium"
-      %>
+        class: "text-small font-medium" %>
+
       <%= form.number_field :note_index_truncate_length,
         value: Current.user.preferences.note_index_truncate_length,
         size: 3,
-        class: "rounded-lg p-2 border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800"
-      %>
+        class: "rounded-lg p-2 border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800" %>
     </div>
 
     <div class="flex w-full justify-center items-center">
       <%= form.submit t(".save"),
-        class: "w-80 border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 hover:bg-zinc-800 shadow rounded-lg mt-6 p-1"
-      %>
+        class: "w-80 border border-zinc-400 dark:border-zinc-600 hover:bg-zinc-200 hover:bg-zinc-800 shadow rounded-lg mt-6 p-1" %>
     </div>
   </div>
 <% end %>
