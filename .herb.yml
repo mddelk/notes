@@ -1,0 +1,16 @@
+# https://github.com/marcoroth/herb
+
+version: 0.8.4
+
+linter:
+  enabled: true
+
+formatter:
+  enabled: true
+  indentWidth: 2
+  maxLineLength: 80
+  # exclude:
+  #   - 'public/**/*'
+  rewriter:
+    pre:
+      - tailwind-class-sorter
