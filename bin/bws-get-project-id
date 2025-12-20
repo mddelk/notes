@@ -1,5 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env ruby
 
-set -e
+require "json"
 
-bin/dotenv bws project list | ruby -rjson -e 'puts JSON.parse(ARGF.read).find{|k,v|k["name"]=="notes-#{ENV.fetch("RAILS_ENV")}"}["id"]'
+name = ARGV[0] or abort("missing required argument name")
+
+puts `bws project list`
+  .then { JSON.parse(it) }
+  .find { _1["name"] == name }
+  .[]("id")

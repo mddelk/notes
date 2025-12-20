@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-set -ex
-
-RAILS_ENV=staging bin/dotenv bin/kamal deploy
-RAILS_ENV=production bin/dotenv bin/kamal deploy

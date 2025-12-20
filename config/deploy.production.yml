@@ -1,0 +1,18 @@
+service: notes-production
+
+servers:
+  web:
+    - <%= `bin/rails credentials:fetch -e production kamal.server` %>
+
+proxy:
+  host: <%= `bin/rails credentials:fetch -e production kamal.proxy_host` %>
+
+env:
+  clear:
+    RAILS_ENV: production
+
+volumes:
+  - <%= `bin/rails credentials:fetch -e production kamal.volume_storage` %>
+
+ssh:
+  user: <%= `bin/rails credentials:fetch -e production kamal.ssh_user` %>

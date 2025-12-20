@@ -1,0 +1,18 @@
+service: notes-staging
+
+servers:
+  web:
+    - <%= `bin/rails credentials:fetch -e staging kamal.server` %>
+
+proxy:
+  host: <%= `bin/rails credentials:fetch -e staging kamal.proxy_host` %>
+
+env:
+  clear:
+    RAILS_ENV: staging
+
+volumes:
+  - <%= `bin/rails credentials:fetch -e staging kamal.volume_storage` %>
+
+ssh:
+  user: <%= `bin/rails credentials:fetch -e staging kamal.ssh_user` %>
