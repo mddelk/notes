@@ -1,7 +1,7 @@
 # Run using bin/ci
 
 CI.run "bin/ci", "Make it so" do
-  step "Setup", "bin/setup --skip-server"
+  step "Setup", "bin/setup"
 
   step "Style: Ruby", "bin/rubocop"
   step "Style: Javascript", "yarn run lint"
@@ -16,5 +16,5 @@ CI.run "bin/ci", "Make it so" do
 
   step "Tests: Rails", "BROWSER=rack-test bin/rails test:all"
   step "Tests: System", "PARALLEL_WORKERS=4 bin/rails test:system"
-  step "Tests: Seeds", "env RAILS_ENV=test bin/rails db:seed:replant"
+  step "Tests: Seeds", "RAILS_ENV=test bin/rails db:seed:replant"
 end
