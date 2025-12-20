@@ -3,6 +3,9 @@ require_relative "../config/environment"
 require "rails/test_help"
 require_relative "test_helpers/session_test_helper"
 
+# hide puma startup messages
+Capybara.server = :puma, {Silent: true}
+
 module ActiveSupport
   class TestCase
     # Run tests in parallel with specified workers
