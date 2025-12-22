@@ -3,8 +3,8 @@
   class: "flex flex-col h-full" do |form| %>
   <div
     class="
-      flex flex-col rounded-lg border border-zinc-400 dark:border-zinc-600
-      shadow w-full min-h-1/2
+      flex flex-col flex-1 rounded-lg border border-zinc-400
+      dark:border-zinc-600 shadow w-full
     "
   >
     <% if note.errors.any? %>
@@ -32,7 +32,6 @@
     <%= form.textarea :content,
       placeholder: t(".content"),
       data: {
-        controller: "textarea", textarea_target: "textarea",
         action: "auto-submit#submit"
       },
       class: "p-4 w-full h-full rounded-b-lg" %>

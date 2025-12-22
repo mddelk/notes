@@ -9,7 +9,6 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin_all_from "app/javascript/utils", under: "utils"
 
 # https://github.com/jackmoore/autosize
-pin "autosize" # @6.0.1
 
 # https://github.com/stimulus-components/stimulus-components
 pin "@stimulus-components/auto-submit", to: "@stimulus-components--auto-submit.js" # @6.0.0
