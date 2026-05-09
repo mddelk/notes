@@ -7,9 +7,6 @@ servers:
 proxy:
   host: <%= `bin/rails credentials:fetch -e staging kamal.proxy_host` %>
 
-ssh:
-  user: <%= `bin/rails credentials:fetch -e staging kamal.ssh_user` %>
-
 env:
   clear:
     RAILS_ENV: staging

@@ -6,6 +6,10 @@ proxy:
 registry:
   server: localhost:5555
 
+ssh:
+  user: <%= `bin/rails credentials:fetch -e staging kamal.ssh_user` %>
+  port: <%= `bin/rails credentials:fetch -e staging kamal.ssh_port` %>
+
 env:
   clear:
     SOLID_QUEUE_IN_PUMA: true

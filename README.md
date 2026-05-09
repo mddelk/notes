@@ -51,6 +51,7 @@ kamal:
   proxy_host: your.deploy.url
   server: 192.123.456.789
   ssh_user: username
+  ssh_port: 22
 
 smtp:
   user_name: username
