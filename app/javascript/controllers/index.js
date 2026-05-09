@@ -2,6 +2,3 @@
 import { application } from "controllers/application";
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading";
 eagerLoadControllersFrom("controllers", application);
-
-import AutoSubmit from "@stimulus-components/auto-submit";
-application.register("auto-submit", AutoSubmit);
