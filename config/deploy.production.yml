@@ -7,12 +7,12 @@ servers:
 proxy:
   host: <%= `bin/rails credentials:fetch -e production kamal.proxy_host` %>
 
+ssh:
+  user: <%= `bin/rails credentials:fetch -e production kamal.ssh_user` %>
+
 env:
   clear:
     RAILS_ENV: production
 
 volumes:
-  - <%= `bin/rails credentials:fetch -e production kamal.volume_storage` %>
-
-ssh:
-  user: <%= `bin/rails credentials:fetch -e production kamal.ssh_user` %>
+  - notes_production_storage:/rails/storage

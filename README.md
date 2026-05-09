@@ -43,6 +43,7 @@ export BWS_SERVER_URL=https://vault.your-bitwarden.com
 
 ```
 bin/rails credentials:edit -e production
+bin/rails credentials:edit -e staging
 ```
 
 ```yaml
@@ -50,7 +51,6 @@ kamal:
   proxy_host: your.deploy.url
   server: 192.123.456.789
   ssh_user: username
-  volume_storage: notes_production_storage:/rails/storage
 
 smtp:
   user_name: username
