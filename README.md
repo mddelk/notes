@@ -27,16 +27,25 @@ password: password
 
 ## Deploy
 
-1. Run a local docker registry: `docker run -d -p 5000:5000 --restart always --name registry registry:2`
-2. Edit `config/credentials/production.yml` and `config/credentials/staging.yml` as needed, e.g:
+1. Setup your secrets manager:
+
+Setup [bitwarden secrets manager](https://bitwarden.com/help/secrets-manager-cli):
+
+- Create 2 projects, `notes-production` and `notes-staging`, and add a `RAILS_MASTER_KEY` to each
+- Install and configure `bws` - `cp .env.example .env`, add the following, then `eval $(cat .env)`:
+
+```
+export BWS_ACCESS_TOKEN='REDACTED'
+export BWS_SERVER_URL=https://vault.your-bitwarden.com
+```
+
+2. Configure your deploy
 
 ```
 bin/rails credentials:edit -e production
 ```
 
 ```yaml
-secret_key_base: your-secret-key-base
-
 kamal:
   proxy_host: your.deploy.url
   server: 192.123.456.789
@@ -54,12 +63,7 @@ smtp:
   from: user@your.deploy.url
 ```
 
-3. Setup [bitwarden secrets manager](https://bitwarden.com/help/secrets-manager-cli):
-  - Create 2 projects, `notes-production` and `notes-staging`, and provide `RAILS_MASTER_KEY`s for each.
-  - Install `bws`
-  - Configure `bws` (e.g, `cp -v .env.example .env`, edit as needed, `. .env`)
-
-Then deploy:
+3. Deploy
 
 ```
 bin/kamal deploy -d staging
