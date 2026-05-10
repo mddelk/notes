@@ -14,7 +14,9 @@ module ApplicationHelper
   # - https://medium.com/@hayavuk/complete-guide-to-svg-sprites-7e202e215d34
   #
   def svg_icon name, class: ""
-    tag.svg class: + " text-zinc-950 dark:text-zinc-200" do
+    tag.svg(
+      class: + " text-zinc-950 dark:text-zinc-200", aria: {hidden: true}
+    ) do
       tag.use href: image_path("icons.svg") + "#icon-#{name}"
     end
   end

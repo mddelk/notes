@@ -46,6 +46,7 @@ en:
       confirm_destroy: Destroy this note?
       destroy_button: Destroy this note
       edited_at: Edited %{time}
+      star: Add to favorites
       submit: Update Note
       title: Editing note
     empty_note_discarded: Empty note discarded

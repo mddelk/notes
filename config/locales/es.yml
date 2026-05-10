@@ -46,6 +46,7 @@ es:
       confirm_destroy: "¿Destruir esta nota?"
       destroy_button: Destruye esta nota
       edited_at: Editado %{time}
+      star: Añadir a favoritos
       submit: Actualizar nota
       title: Editar nota
     empty_note_discarded: Nota vacía descartada

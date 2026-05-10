@@ -22,6 +22,8 @@
       </div>
     <% end %>
 
+    <%= form.label :title, class: "sr-only" %>
+
     <%= form.text_field :title,
       data: { action: "auto-submit#submit" },
       placeholder: t(".title"),

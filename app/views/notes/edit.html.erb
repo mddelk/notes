@@ -19,6 +19,8 @@
       <%= button_to edit_note_path(@note),
         class: "w-12 h-10 p-3 flex h-full items-center justify-center rounded-r-lg hover:bg-zinc-200 dark:hover:bg-zinc-800" do %>
         <%= svg_icon "star", class: "w-6 dark:invert" %>
+
+        <div class="sr-only"><%= t(".star") %></div>
       <% end %>
 
       <%= button_to note_path(@note),
