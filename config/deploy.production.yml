@@ -7,6 +7,10 @@ servers:
 proxy:
   host: <%= `bin/rails credentials:fetch -e production kamal.proxy_host` %>
 
+ssh:
+  user: <%= `bin/rails credentials:fetch -e production kamal.ssh_user` %>
+  port: <%= `bin/rails credentials:fetch -e production kamal.ssh_port` %>
+
 env:
   clear:
     RAILS_ENV: production
