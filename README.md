@@ -52,16 +52,6 @@ kamal:
   server: 192.123.456.789
   ssh_user: username
   ssh_port: 22
-
-smtp:
-  user_name: username
-  password: password
-  address: your.smtp.address
-  host: your.smtp.host
-  port: 123
-  authentication: TODO
-  host: your.deploy.url
-  from: user@your.deploy.url
 ```
 
 3. Deploy
