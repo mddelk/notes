@@ -7,8 +7,9 @@ registry:
   server: localhost:5555
 
 env:
-  clear:
-    SOLID_QUEUE_IN_PUMA: true
+  # NOTE: no need for ANY background jobs atm
+  # clear:
+  #   SOLID_QUEUE_IN_PUMA: true
   secret:
     - RAILS_MASTER_KEY
 
