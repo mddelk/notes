@@ -69,30 +69,6 @@ en:
     update:
       edited_just_now: Edited just now
       success: Note was successfully updated.
-  passwords:
-    create:
-      success: Password reset instructions sent.
-    edit:
-      password_confirmation_label: Password confirmation
-      password_confirmation_placeholder: Repeat new password
-      password_label: Password
-      password_placeholder: Enter new password
-      save: Save
-      update_your_password: Update your password
-    invalid_reset_link: Password reset link is invalid or has expired.
-    mailer_subject: Reset your password
-    new:
-      email_address_label: Email address
-      email_address_placeholder: Enter your email address
-      email_reset_instructions: Email reset instructions
-      forgot_your_password: Forgot your password?
-      sign_in_instead: Sign in instead
-    update:
-      failure: Passwords did not match.
-      success: Password has been reset.
-  passwords_mailer:
-    reset:
-      reset_password_html: You can reset your password within the next 15 minutes on <a href="%{link}">this password reset page</a>.
   preferences:
     edit:
       confirm_signout: Sign out?
@@ -113,7 +89,6 @@ en:
     new:
       email_address_label: Email address
       email_address_placeholder: Enter your email address
-      forgot_your_password: Forgot your password?
       password_label: Password
       password_placeholder: Enter your password
       sign_in: Sign in

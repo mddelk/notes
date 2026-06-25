@@ -69,30 +69,6 @@ es:
     update:
       edited_just_now: Editado hace un momento
       success: La nota se actualizó con éxito.
-  passwords:
-    create:
-      success: Instrucciones de restablecimiento de contraseña enviadas.
-    edit:
-      password_confirmation_label: Confirmación de contraseña
-      password_confirmation_placeholder: Repetir nueva contraseña
-      password_label: Contraseña
-      password_placeholder: Introduzca la nueva contraseña
-      save: Salvar
-      update_your_password: Actualiza tu contraseña
-    invalid_reset_link: El enlace de restablecimiento de contraseña no es válido o ha caducado.
-    mailer_subject: Restablece tu contraseña
-    new:
-      email_address_label: Dirección de correo electrónico
-      email_address_placeholder: Ingresa tu dirección de correo electrónico
-      email_reset_instructions: Enviar por correo electrónico las instrucciones de restablecimiento
-      forgot_your_password: "¿Olvidaste tu contraseña?"
-      sign_in_instead: Inicie sesión en su lugar
-    update:
-      failure: Las contraseñas no coincidían.
-      success: Se ha restablecido la contraseña.
-  passwords_mailer:
-    reset:
-      reset_password_html: Puede restablecer su contraseña dentro de los próximos 15 minutos en <a href="%{link}">esta página de restablecimiento de contraseña</a>.
   preferences:
     edit:
       confirm_signout: "¿Cerrar sesión?"
@@ -113,7 +89,6 @@ es:
     new:
       email_address_label: Dirección de correo electrónico
       email_address_placeholder: Ingresa tu dirección de correo electrónico
-      forgot_your_password: "¿Olvidaste tu contraseña?"
       password_label: Contraseña
       password_placeholder: Ingresa tu contraseña
       sign_in: Inicia sesión

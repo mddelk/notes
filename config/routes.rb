@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", :as => :pwa_service_worker
 
   resource :session
-  resources :passwords, param: :token
   get "offline", to: "static_pages#offline", as: :offline
 
   resources :notes, except: %i[new show]
