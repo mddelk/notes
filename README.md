@@ -47,6 +47,10 @@ bin/rails credentials:edit -e staging
 ```
 
 ```yaml
+deploy:
+  local_backups_directory: /some/local/path
+  remote_backups_directory: /some/remote/path
+
 kamal:
   proxy_host: your.deploy.url
   server: 192.123.456.789
@@ -59,6 +63,13 @@ kamal:
 ```
 bin/kamal deploy -d staging
 bin/kamal deploy -d production
+```
+
+### Backup
+
+```
+bin/rails runner script/backups/backup.rb -e staging
+bin/rails runner script/backups/backup.rb -e production
 ```
 
 ## Logo
