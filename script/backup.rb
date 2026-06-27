@@ -1,4 +1,4 @@
-require_relative "../../config/environment"
+require_relative "../config/environment"
 
 def log(msg) = puts("==> #{msg}")
 

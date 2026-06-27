@@ -68,8 +68,8 @@ bin/kamal deploy -d production
 Download a local backup:
 
 ```
-bin/rails runner script/backups/backup.rb -e staging
-bin/rails runner script/backups/backup.rb -e production
+bin/rails runner script/backup.rb -e staging
+bin/rails runner script/backup.rb -e production
 ```
 
 ## license
