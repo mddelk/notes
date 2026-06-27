@@ -44,8 +44,6 @@ Add the following:
 deploy:
   local_backups_directory: /some/local/path
   remote_backups_directory: /some/remote/path
-  digital_ocean_token: XXX
-  monitoring_email: your@monitoring.email
 
 kamal:
   proxy_host: your.deploy.url
@@ -68,8 +66,8 @@ bin/kamal deploy -d production
 Download a local backup:
 
 ```
-bin/rails runner script/backup.rb -e staging
-bin/rails runner script/backup.rb -e production
+bin/rails r script/backup.rb -e staging
+bin/rails r script/backup.rb -e production
 ```
 
 ## license
