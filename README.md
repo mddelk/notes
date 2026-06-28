@@ -70,6 +70,13 @@ bin/rails r script/backup.rb -e staging
 bin/rails r script/backup.rb -e production
 ```
 
+Restore from a previous backup:
+
+```
+bin/rails r script/restore.rb restore.tgz -e staging
+bin/rails r script/restore.rb restore.tgz -e production
+```
+
 ## license
 
 ```
